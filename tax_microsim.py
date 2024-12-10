@@ -503,7 +503,7 @@ def main():
     ctypes.windll.shcore.SetProcessDpiAwareness(1)
     root = tk.Tk()
     root.geometry('1000x600')
-    root.title("World Bank Microsimulation Model")
+    root.title("Microsimulation Model")
     root.state('zoomed')
     app = Application(root)
     app.mainloop()

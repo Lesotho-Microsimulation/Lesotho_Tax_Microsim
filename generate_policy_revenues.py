@@ -425,7 +425,7 @@ def generate_policy_revenues():
         gini['percentage_cumul_income'] = gini['cumulative_total_income']/sum_total_income
         gini['height'] = gini['percentage_cumul_pop']-gini['percentage_cumul_income']
         gini1 = pd.DataFrame([[np.nan]*len(gini.columns)], columns=gini.columns)
-        gini = gini1.append(gini, ignore_index=True)
+        gini = gini1._append(gini, ignore_index=True)
         gini['percentage_cumul_pop']= gini['percentage_cumul_pop'].fillna(0)
         gini['percentage_cumul_income']= gini['percentage_cumul_income'].fillna(0)
         gini['height']= gini['height'].fillna(0)
@@ -445,7 +445,7 @@ def generate_policy_revenues():
             gini['percentage_cumul_income'] = gini['cumulative_total_income']/sum_total_income
             gini['height'] = gini['percentage_cumul_pop']-gini['percentage_cumul_income']            
             gini1 = pd.DataFrame([[np.nan]*len(gini.columns)], columns=gini.columns)
-            gini = gini1.append(gini, ignore_index=True)
+            gini = gini1._append(gini, ignore_index=True)
             gini['percentage_cumul_pop']= gini['percentage_cumul_pop'].fillna(0)
             gini['percentage_cumul_income']= gini['percentage_cumul_income'].fillna(0)
             gini['height']= gini['height'].fillna(0)
